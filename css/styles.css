@@ -58,13 +58,13 @@ main {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#intro h2 {
+h2 {
     color: var(--section-header-color);
     font-size: 2em;
     transition: color 0.3s ease;
 }
 
-#intro p {
+p {
     font-size: 1.2em;
     transition: color 0.2s ease; /* Reduced transition duration */
 }
@@ -134,11 +134,11 @@ form button:hover {
         font-size: 1em;
     }
 
-    #intro h2 {
+    h2 {
         font-size: 1.5em;
     }
 
-    #intro p {
+    p {
         font-size: 1em;
     }
 
@@ -160,11 +160,11 @@ form button:hover {
         margin: 5px 0;
     }
 
-    #intro h2 {
+    h2 {
         font-size: 1.2em;
     }
 
-    #intro p {
+    p {
         font-size: 0.9em;
     }
 
@@ -178,7 +178,7 @@ form button:hover {
     --background-color: #1a1a1a;
     --text-color: #e0e0e0;
     --header-background-color: #2c2c2c;
-    --header-text-color: #9b59b6;
+    --header-text-color: #9b59b6; /* Purple color */
     --link-color: #39ff14;
     --link-hover-color: #32cd32;
     --section-header-color: #39ff14;
@@ -196,7 +196,7 @@ body.light-mode {
     --background-color: #ffffff;
     --text-color: #000000;
     --header-background-color: #f0f0f0;
-    --header-text-color: #6a1b9a;
+    --header-text-color: #6a1b9a; /* Purple color */
     --link-color: #00796b;
     --link-hover-color: #004d40;
     --section-header-color: #00796b;

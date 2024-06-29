@@ -13,11 +13,19 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('light-mode');
             themeIcon.textContent = '🌙'; // Moon icon for dark mode
         }
+        // Save the theme preference in localStorage
+        localStorage.setItem('theme', theme);
     }
 
-    // Check the user's system preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(prefersDarkScheme ? 'dark' : 'light');
+    // Load the theme preference from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        // Check the user's system preference if no theme is saved
+        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDarkScheme ? 'dark' : 'light');
+    }
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', function() {
